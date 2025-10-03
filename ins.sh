@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Not done yet mv to /usr/bin or some other dir in your path for the time being"
+echo "Now install addert when done you can run addert to use it!"
+sudo mv ~/addert/bin/addert /bin
+DONE!
