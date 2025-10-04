@@ -24,7 +24,7 @@ main :: proc() {
 
 		sum_float: c.float = float1 + float2
 
-		libc.printf("%.2f + %.2f = \x1b[34m%.2f\x1b[0m\n", float1, float2, sum_float)
+		fmt.printf("%.2f + %.2f = \x1b[34m%.2f\x1b[0m\n", float1, float2, sum_float)
 	} else if mode == 'n' {
 
 		num1: c.int = 0
@@ -40,7 +40,7 @@ main :: proc() {
 
 		sum_int: c.int = num1 + num2
 
-		libc.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
+		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
 		fmt.println("Addert v1.4.3 writen in odin last update 10-03-25")
 	} else if mode == 'c' {
