@@ -24,7 +24,7 @@ main :: proc() {
 
 		sum_float: c.float = float1 + float2
 
-		fmt.printf("%.2f + %.2f = \x1b[34m%.2f\x1b[0m\n", float1, float2, sum_float)
+		fmt.printf("%.2f + %.2f = \x1b[34m%f\x1b[0m\n", float1, float2, sum_float)
 	} else if mode == 'n' {
 
 		num1: c.int = 0
@@ -48,7 +48,7 @@ main :: proc() {
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nh = help page (current page)",
+			"\nAddert Program For Adding Suff\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -64,7 +64,7 @@ main :: proc() {
 
 		dif_int: c.int = sub_int1 - sub_int2
 
-		fmt.printf("%d - %d = \x1b[34m%d\x1b[0m\n", sub_int1, sub_int2, dif_int)
+		fmt.printf("%d - %d = \x1b[32m%d\x1b[0m\n", sub_int1, sub_int2, dif_int)
 
 	} else if mode == 'f' {
 		sub_float1: c.float = 0.0
@@ -78,10 +78,36 @@ main :: proc() {
 
 		libc.scanf("%f", &sub_float2)
 
-		dif_float: c.float = 0.0
+		dif_float: c.float = sub_float1 - sub_float2
 
-		fmt.printf("%.2f - %.2f = \x1b[34m%.2f\x1b[0m\n", sub_float1, sub_float2, dif_float)
+		fmt.printf("%.2f - %.2f = \x1b[32m%f\x1b[0m\n", sub_float1, sub_float2, dif_float)
 
+
+	} else if mode == 'm' {
+		mul_int1: c.int = 0
+		mul_int2: c.int = 0
+
+		fmt.print("Enter a number you want to multiply(1) -> ")
+		libc.scanf("%d", &mul_int1)
+
+		fmt.printf("Enter a number you want to multiply(2)")
+		libc.scanf("%d", &mul_int2)
+
+		pro_int: c.int = mul_int1 * mul_int2
+		fmt.printf("%d * %d = \x1b[33m%d\x1b[0m\n", mul_int1, mul_int2, pro_int)
+
+	} else if mode == 'l' {
+		mul_float1: c.float = 0.0
+		mul_float2: c.float = 0.0
+
+		fmt.print("Enter a decimal you want to multiply(1) -> ")
+		libc.scanf("%f", &mul_float1)
+
+		fmt.print("Enter a decimal you want to mulitply(2) -> ")
+		libc.scanf("%f", &mul_float2)
+
+		pro_float: c.float = mul_float1 * mul_float2
+		fmt.printf("%.2f * %.2f = \x1b[33m%f\x1b[0m\n", mul_float1, mul_float2, pro_float)
 
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
