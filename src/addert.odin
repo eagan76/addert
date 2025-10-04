@@ -42,15 +42,49 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert v1.4.3 writen in odin last update 10-03-25")
+		fmt.println("Addert vDev-2.0.0 writen in odin last update 10-04-25")
 	} else if mode == 'c' {
 		fmt.println("(c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
+		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\nh = help page (current page)",
+			"\nAddert Program For Adding Suff\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nh = help page (current page)",
 		)
+	} else if mode == 's' {
+		sub_int1: c.int = 0
+		sub_int2: c.int = 0
+
+		fmt.print("Enter a number you want to subtract(1) -> ")
+
+		libc.scanf("%d", &sub_int1)
+
+		fmt.print("Enter a number you want to subtract(2) --> ")
+
+		libc.scanf("%d", &sub_int2)
+
+		dif_int: c.int = sub_int1 - sub_int2
+
+		fmt.printf("%d - %d = \x1b[34m%d\x1b[0m\n", sub_int1, sub_int2, dif_int)
+
+	} else if mode == 'f' {
+		sub_float1: c.float = 0.0
+		sub_float2: c.float = 0.0
+
+		fmt.print("Enter a decimal you what to subtract(1) -> ")
+
+		libc.scanf("%f", &sub_float1)
+
+		fmt.print("Enter a decimal you what to subtract(2) --> ")
+
+		libc.scanf("%f", &sub_float2)
+
+		dif_float: c.float = 0.0
+
+		fmt.printf("%.2f - %.2f = \x1b[34m%.2f\x1b[0m\n", sub_float1, sub_float2, dif_float)
+
+
 	} else {
-		fmt.println("\x1b[31mError Invalid Mode\x1b[0m\nUse h For The Help Page")
+		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
 	}
 
 }
