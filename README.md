@@ -1,4 +1,4 @@
-# Addert is a Program made for me to Learn how to use git, odin and bash scripting it will get more complex in the future.
+## Addert is a Program made for me to Learn how to use git, odin and bash scripting it will get more complex in the future.
 ## Install 
 ### 1.
 ```
