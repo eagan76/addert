@@ -42,13 +42,13 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert vDev-2.0.0 writen in odin last update 10-04-25")
+		fmt.println("Addert v2.0.3 writen in odin last update 10-04-25")
 	} else if mode == 'c' {
 		fmt.println("(c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nh = help page (current page)",
+			"\nAddert Program For Adding Suff Now a Four-Function Calculator\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -90,7 +90,7 @@ main :: proc() {
 		fmt.print("Enter a number you want to multiply(1) -> ")
 		libc.scanf("%d", &mul_int1)
 
-		fmt.printf("Enter a number you want to multiply(2)")
+		fmt.printf("Enter a number you want to multiply(2) -->")
 		libc.scanf("%d", &mul_int2)
 
 		pro_int: c.int = mul_int1 * mul_int2
@@ -103,11 +103,37 @@ main :: proc() {
 		fmt.print("Enter a decimal you want to multiply(1) -> ")
 		libc.scanf("%f", &mul_float1)
 
-		fmt.print("Enter a decimal you want to mulitply(2) -> ")
+		fmt.print("Enter a decimal you want to mulitply(2) --> ")
 		libc.scanf("%f", &mul_float2)
 
 		pro_float: c.float = mul_float1 * mul_float2
 		fmt.printf("%.2f * %.2f = \x1b[33m%f\x1b[0m\n", mul_float1, mul_float2, pro_float)
+
+	} else if mode == 'q' {
+		divide_int1: c.int = 0
+		divide_int2: c.int = 0
+
+		fmt.print("Enter a number you want to divide(1) -> ")
+		libc.scanf("%d", &divide_int1)
+
+		fmt.print("Enter a number you what to divide(2) --> ")
+		libc.scanf("%d", &divide_int2)
+
+		quo_int: c.int = divide_int1 / divide_int2
+		fmt.printf("%d / %d = \x1b[35m%d\x1b[0m\n", divide_int1, divide_int2, quo_int)
+
+	} else if mode == 'o' {
+		divide_float1: c.float = 0
+		divide_float2: c.float = 0
+
+		fmt.print("Enter a decimal you want to divide(1) -> ")
+		libc.scanf("%f", &divide_float1)
+
+		fmt.print("Enter a decimal you want to divide(2) --> ")
+		libc.scanf("%f", &divide_float2)
+
+		quo_float: c.float = divide_float1 / divide_float2
+		fmt.printf("%f / %f = \x1b[35m%f\x1b[m\n", divide_float1, divide_float2, quo_float)
 
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
