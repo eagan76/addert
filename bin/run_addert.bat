@@ -1,2 +1,4 @@
 @echo off
-echo Coming soon
+:loop
+start "" "%USERPROFILE%\addert\bin\addert.exe"
+goto loop
