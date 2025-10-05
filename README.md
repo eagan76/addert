@@ -21,3 +21,25 @@ Or
 run_addert.sh
 ```
 This will restart program after stop
+## Windows Install
+### 1.
+```
+git clone https://github.com/eagan76/addert.git
+```
+### 2.
+```
+cd addert
+```
+###  3.
+```
+./installer.ps1
+```
+## Run Addert
+```
+addert.exe
+```
+Or 
+```
+run_addert.bat
+```
+This will restart program after stop
