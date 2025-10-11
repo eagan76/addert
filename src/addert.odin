@@ -48,7 +48,7 @@ main :: proc() {
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nt = list current local and universal time\nr = runs clock same as t but with loop\nh = help page (current page)",
+			"\nAddert Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nt = list current local and universal time\nr = list current local and universal time with loop like clock\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
