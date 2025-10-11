@@ -42,13 +42,13 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert v2.0.5 writen in odin last update 10-05-25")
+		fmt.println("Addert v2.1.0 writen in odin last update 10-10-25")
 	} else if mode == 'c' {
 		fmt.println("(c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff Now a Four-Function Calculator\n\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nh = help page (current page)",
+			"\nAddert Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nt = list current local and universal time\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -134,6 +134,9 @@ main :: proc() {
 
 		quo_float: c.float = divide_float1 / divide_float2
 		fmt.printf("%f / %f = \x1b[35m%f\x1b[m\n", divide_float1, divide_float2, quo_float)
+
+	} else if mode == 't' {
+		libc.system("clock")
 
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
