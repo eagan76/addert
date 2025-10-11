@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 echo -e "\033[0;34mInstalling Addert\033[0m"
+sudo cp ~/addert/bin/localclock_loop.sh
+sudo cp ~/addert/bin/localclock
 sudo cp ~/addert/bin/clockloop.sh /bin
 sudo cp ~/addert/bin/addert /bin
 sudo cp ~/addert/bin/run_addert.sh /bin
