@@ -28,18 +28,10 @@ git clone https://github.com/eagan76/addert.git
 ```
 ### 2.
 ```
-cd addert
-```
-###  3.
-```
-./installer.ps1
+cd addert\bin
 ```
 ## Run Addert
 ```
 addert.exe
 ```
-Or 
-```
-run_addert.bat
-```
-This will restart program after stop
+for windows I've been unsuccessful at making install scripts, four scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
