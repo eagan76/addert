@@ -5,7 +5,7 @@ import "core:c/libc"
 import "core:fmt"
 
 main :: proc() {
-	mode: rune = 'i'
+	mode: rune = ']'
 	fmt.print("Mode: type h for help -> ")
 	libc.scanf("%c", &mode)
 
@@ -48,7 +48,7 @@ main :: proc() {
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux only)\ni = list current local time only (Linux only)\nw = list current local time only with loop like a clock (Linux only)\nh = help page (current page)",
+			"\nAddert Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux only)\ni = list current local time only (Linux only)\nw = list current local time only with loop like a clock (Linux only)\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -144,6 +144,12 @@ main :: proc() {
 		libc.system("localclock")
 	} else if mode == 'w' {
 		libc.system("localclock_loop.sh")
+	} else if mode == 'k' {
+		// C° -> F°
+		fmt.println("Coming Soon!")
+	} else if mode == 'b' {
+		// F° -> C°
+		fmt.println("Coming Soon!")
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
 	}
