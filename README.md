@@ -34,4 +34,4 @@ cd addert\bin
 ```
 addert.exe
 ```
-for windows I've been unsuccessful at making install scripts, four scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
+For windows I've been unsuccessful at making install scripts, four scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
