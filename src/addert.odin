@@ -2,12 +2,12 @@ package adder
 
 import "core:c"
 import "core:c/libc"
-import "core:crypto/ed25519"
 import "core:fmt"
 
+
 when ODIN_OS == .Windows {
-	set_utf8_console :: proc() {
-		c.system("chcp 65001 >nul")
+	utf8_console :: proc() {
+		libc.system("utf8_cmd.bat")
 	}
 }
 
