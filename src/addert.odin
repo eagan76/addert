@@ -2,6 +2,7 @@ package adder
 
 import "core:c"
 import "core:c/libc"
+import "core:crypto/ed25519"
 import "core:fmt"
 
 main :: proc() {
@@ -42,7 +43,7 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert v2.1.2 writen in odin last update 10-11-25")
+		fmt.println("Addert v2.1.3 writen in odin last update 10-12-25")
 	} else if mode == 'c' {
 		fmt.println("(c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
@@ -137,7 +138,6 @@ main :: proc() {
 
 	} else if mode == 't' {
 		libc.system("clock")
-
 	} else if mode == 'r' {
 		libc.system("clockloop.sh")
 	} else if mode == 'i' {
@@ -146,10 +146,26 @@ main :: proc() {
 		libc.system("localclock_loop.sh")
 	} else if mode == 'k' {
 		// C° -> F°
-		fmt.println("Coming Soon!")
+		celsius1: f32 = 0.0
+		fahrenheit1: f32 = 0.0
+
+		fmt.print("Enter the C° you want to convert to F° >> ")
+		libc.scanf("%f", &celsius1)
+
+		fahrenheit1 = (celsius1 * 9.0 / 5.0) + 32.0
+
+		fmt.printfln("%f°C = \x1b[36m%f°F\x1b[0m", celsius1, fahrenheit1)
 	} else if mode == 'b' {
 		// F° -> C°
-		fmt.println("Coming Soon!")
+		fahrenheit2: f32 = 0.0
+		celsius2: f32 = 0.0
+
+		fmt.print("Enter the F° you want to convert to F° >> ")
+		libc.scanf("%f", &fahrenheit2)
+
+		celsius2 = (fahrenheit2 - 32.0) * 5.0 / 9.0
+
+		fmt.printfln("%f°F = \x1b[36m%f°C\x1b[0m", fahrenheit2, celsius2)
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
 	}
