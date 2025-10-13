@@ -4,42 +4,39 @@
 # License: BSD-3-Clause License
 
 clear
-echo -e "Starting Install...\n"
+echo -e "Starting Addupt...\n"
+cd ~/addert
+git pull origin
 sleep 1
-echo -e "\033[0;34mInstalling Addert_Linux v2.1\n\033[0m"
+echo -e "\033[0;34mUpdating to Addert_Linux v2.1\n\033[0m"
 sleep 0.5
-echo -e "Installing localclock_loop.sh..."
+echo -e "Updating localclock_loop.sh..."
 sleep 1
 sudo cp ~/addert/bin/localclock_loop.sh /bin
 echo -e "Done\n"
-echo -e "Installing localclock..."
+echo -e "Updating localclock..."
 sleep 1
 sudo cp ~/addert/bin/localclock /bin
 echo -e "Done\n"
-echo -e "Installing clockloop.sh..."
+echo -e "Updating clockloop.sh..."
 sleep 1
 sudo cp ~/addert/bin/clockloop.sh /bin
 echo -e "Done\n"
-echo -e "Installing addert..."
+echo -e "Updating addert..."
 sleep 1
 sudo cp ~/addert/bin/addert /bin
 echo -e "Done\n"
-echo -e "Installing run_addert.sh..."
+echo -e "Updating run_addert.sh..."
 sleep 1
 sudo cp ~/addert/bin/run_addert.sh /bin
 echo -e "Done\n"
-echo -e "Installing clock.sh..."
+echo -e "Updating clock.sh..."
 sleep 1
 sudo cp ~/addert/bin/clock.sh /bin
 echo -e "Done\n"
-echo -e "Installing clock..."
+echo -e "Updating clock..."
 sleep 1
 sudo cp ~/addert/bin/clock /bin
 echo -e "Done\n"
 sleep 1
-echo -e "Installing addupt..."
-sleep 1
-sudo cp ~/addert/bin/addupt /bin
-echo -e "Done\n"
-sleep 1
-echo -e "\033[0;32mInstall Complete!\033[0m"
+echo -e "\033[0;32mUpdate Complete!\033[0m"
