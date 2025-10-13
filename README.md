@@ -23,7 +23,7 @@ run_addert.sh
 This will restart program after stop
 ## Windows Install
 ### 1.
-Open cmd not powershell.
+Open CMD or PowerShell
 ```
 git clone https://github.com/eagan76/addert.git
 ```
@@ -31,10 +31,15 @@ git clone https://github.com/eagan76/addert.git
 ```
 cd addert\bin
 ```
-## Run Addert
+## Run Addert CMD
 ```
 addert.bat
 ```
+## Run Addert PowerShell
+```
+.\addert.bat
+```
+
 Do not run addert.exe you will have issuse with simbols being rendered weird.
 ###
-For windows I've been unsuccessful at making install scripts, four scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
+For windows I've been unsuccessful at making install scripts, and scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
