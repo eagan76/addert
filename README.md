@@ -1,5 +1,5 @@
 ## Addert is a Program made for me to Learn how to use git, odin and bash scripting it will get more complex in the future.
-## Install 
+## Linux/WSL Install 
 ### 1.
 ```
 git clone https://github.com/eagan76/addert.git
