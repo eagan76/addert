@@ -1,5 +1,9 @@
 package adder
 
+// Copyright (c) 2025, Tyler Eagan
+// License: BSD-3-Clause License
+
+
 import "core:c"
 import "core:c/libc"
 import "core:fmt"
