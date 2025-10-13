@@ -37,4 +37,4 @@ addert.bat
 ```
 Do not run addert.exe you will have issuse with simbols being rendered weird.
 ###
-For windows I've been unsuccessful at making install scripts, four scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
+For windows I've been unsuccessful at making install scripts, and scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
