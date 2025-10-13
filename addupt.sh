@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# Copyright (c) 2025, Tyler Eagan
+# License: BSD-3-Clause License
+
+sleep 1
+echo -e "\033[0;34mUpdating to Addert_Linux v2.1\n\033[0m"
+sleep 0.5
+echo -e "Updating localclock_loop.sh..."
+sleep 1
+sudo cp ~/addert/bin/localclock_loop.sh /bin
+echo -e "Done\n"
+echo -e "Updating localclock..."
+sleep 1
+sudo cp ~/addert/bin/localclock /bin
+echo -e "Done\n"
+echo -e "Updating clockloop.sh..."
+sleep 1
+sudo cp ~/addert/bin/clockloop.sh /bin
+echo -e "Done\n"
+echo -e "Updating addert..."
+sleep 1
+sudo cp ~/addert/bin/addert /bin
+echo -e "Done\n"
+echo -e "Updating run_addert.sh..."
+sleep 1
+sudo cp ~/addert/bin/run_addert.sh /bin
+echo -e "Done\n"
+echo -e "Updating clock.sh..."
+sleep 1
+sudo cp ~/addert/bin/clock.sh /bin
+echo -e "Done\n"
+echo -e "Updating clock..."
+sleep 1
+sudo cp ~/addert/bin/clock /bin
+echo -e "Done\n"
+sleep 1
+echo -e "\033[0;32mUpdate Complete!\033[0m"
