@@ -43,3 +43,16 @@ addert.bat
 Do not run addert.exe you will have issuse with simbols being rendered weird.
 ###
 For windows I've been unsuccessful at making install scripts, and scripts that loop the program so you can go and manually set the executable as an environment variable or you could just run it inside of the directory it's in. 
+
+
+## Updating
+### Linux 
+To update addert and other suff on linux all you have to do is run
+```
+addupt
+```
+###
+For Windows there is no update script so insted run inside of your local addert repo
+```
+git pull
+```
