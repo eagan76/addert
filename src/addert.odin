@@ -159,7 +159,7 @@ main :: proc() {
 		fahrenheit2: f32 = 0.0
 		celsius2: f32 = 0.0
 
-		fmt.print("Enter the F° you want to convert to F° >> ")
+		fmt.print("Enter the F° you want to convert to C° >> ")
 		libc.scanf("%f", &fahrenheit2)
 
 		celsius2 = (fahrenheit2 - 32.0) * 5.0 / 9.0
