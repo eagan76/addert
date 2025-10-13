@@ -4,13 +4,6 @@ import "core:c"
 import "core:c/libc"
 import "core:fmt"
 
-
-when ODIN_OS == .Windows {
-	utf8_console :: proc() {
-		libc.system("utf8_cmd.bat")
-	}
-}
-
 main :: proc() {
 	mode: rune = ']'
 	fmt.print("Mode: type h for help -> ")
