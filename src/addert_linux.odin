@@ -176,6 +176,6 @@ main :: proc() {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
 	}
 
-	fmt.println("\nThank You For Useing Addert,\n    eagan76")
+	fmt.println("\n\nThank You For Useing Addert, \n\neagan76")
 }
 
