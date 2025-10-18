@@ -46,13 +46,17 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.1.4-2 writen in Odin last update: 10-18-25")
+		fmt.println("Addert-Unified v2.2.1-1 writen in Odin last update: 10-18-25")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
 			"\nAddert-Unified Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux Only)\ni = list current local time only (Linux Only)\nw = list current local time only with loop like a clock(Linux Only)\n\nu = update addert you can also run addupt in the terminal\n\nh = help page (current page)",
+		)
+	} else if mode == '?' {
+		fmt.println(
+			"Hello User, you have found the extra modes page: \n\nz = play theme song Linux Only, Must Have mpv installed\n? = Extra Modes (current page)\n",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -173,6 +177,12 @@ main :: proc() {
 		fmt.print("Starting Addert Updater...\n\n")
 		libc.system("addupt")
 	} else if mode == 'z' {
+		libc.system("mpv ~/addert/music/addert_theme2.mp3")
+
+		fmt.println(
+			"\nTheme Song Credit: \n\nHomeworld Collapse by Arthur Vyncke | https://soundcloud.com/arthurvost\nCreative Commons / Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)\nhttps://creativecommons.org/licenses/by-sa/3.0/deed.en_US\n",
+		)
+
 		fmt.println("\n\nThank You For Useing Addert, eagan76")
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
