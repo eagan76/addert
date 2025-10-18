@@ -46,13 +46,13 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert_Linux v2.1.4-1 writen in Odin last update: 10-13-25")
+		fmt.println("Addert-Unified v2.1.4-2 writen in Odin last update: 10-18-25")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert_Linux Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\nt = list current local and universal time\nr = list current local and universal time with loop like a clock\ni = list current local time only\nw = list current local time only with loop like a clock\n\nu = update addert you can also run addupt in the terminal\n\nh = help page (current page)",
+			"\nAddert-Unified Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux Only)\ni = list current local time only (Linux Only)\nw = list current local time only with loop like a clock(Linux Only)\n\nu = update addert you can also run addupt in the terminal\n\nh = help page (current page)",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -172,10 +172,11 @@ main :: proc() {
 	} else if mode == 'u' {
 		fmt.print("Starting Addert Updater...\n\n")
 		libc.system("addupt")
+	} else if mode == 'z' {
+		fmt.println("\n\nThank You For Useing Addert, eagan76")
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
+		fmt.println("Code:1")
 	}
-
-	fmt.println("\n\nThank You For Useing Addert, \n\neagan76")
 }
 
