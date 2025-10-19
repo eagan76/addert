@@ -4,7 +4,7 @@
 # License: BSD-3-Clause License
 
 sleep 1
-echo -e "\033[0;34mUpdating to Addert Unified v2.1.4-2\n\033[0m"
+echo -e "\033[0;34mUpdating to Addert Unified v2.2.1-1\n\033[0m"
 sleep 0.5
 echo -e "Updating localclock_loop.sh..."
 sleep 1

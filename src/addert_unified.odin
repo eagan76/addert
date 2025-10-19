@@ -56,7 +56,7 @@ main :: proc() {
 		)
 	} else if mode == '?' {
 		fmt.println(
-			"Hello User, you have found the extra modes page: \n\nz = play theme song Linux Only, Must Have mpv installed\n? = Extra Modes (current page)\n",
+			"Hello User, you have found the extra modes page: \n\nNOTE: all this suff will work on linux it may work on other OS too\n- = play og theme song must have mpv installed\n+ = play new theme song must mave mpv installed\nz = play a cool song must have mpv installed\n? = Extra Modes (current page)\n",
 		)
 	} else if mode == 's' {
 		sub_int1: c.int = 0
@@ -180,10 +180,21 @@ main :: proc() {
 		libc.system("mpv ~/addert/music/addert_theme2.mp3")
 
 		fmt.println(
-			"\nTheme Song Credit: \n\nHomeworld Collapse by Arthur Vyncke | https://soundcloud.com/arthurvost\nCreative Commons / Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)\nhttps://creativecommons.org/licenses/by-sa/3.0/deed.en_US\n",
+			"\nSong Credit: \n\nHomeworld Collapse by Arthur Vyncke | https://soundcloud.com/arthurvost\nCreative Commons / Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)\nhttps://creativecommons.org/licenses/by-sa/3.0/deed.en_US\n",
 		)
 
 		fmt.println("\n\nThank You For Useing Addert, eagan76")
+	} else if mode == '+' {
+		libc.system("mpv ~/addert/music/Addert_Theme3.wav")
+		fmt.println("\nSong Credit: \n\nAddert Theme No. 1, by Tyler Eagan")
+
+		fmt.println("\n\nThank You For Useing Addert, Tyler Eagan")
+	} else if mode == '-' {
+		libc.system("mpv ~/addert/music/addert_theme.wav")
+
+		fmt.println("\nSong Credit: \n\nOG Addert Theme by Tyler Eagan")
+		fmt.println("\n\nThank You For Useing Addert, Tyler Eagan")
+
 	} else {
 		fmt.println("\x1b[31mError Invalid Mode\x1b[0m")
 		fmt.println("Code:1")
