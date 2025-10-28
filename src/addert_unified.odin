@@ -12,7 +12,7 @@ import "core:math"
 
 error :: proc(msg: string, fix: string, procedure: string, code: int) {
 	fmt.printfln(
-		"\x1b[31m    Error \x1b[0m-> \x1b[31m%v \n\x1b[0m%v\n\nDEBUG: \nProcedure: %v\nError Code: %v",
+		"\x1b[31m    Error \x1b[0m-> \x1b[31m%v \n\x1b[0mFix: %v\n\nDEBUG: \nProcedure: %v\nError Code: %v",
 		msg,
 		fix,
 		procedure,
