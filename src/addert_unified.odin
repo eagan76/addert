@@ -12,7 +12,7 @@ import "core:math"
 
 error :: proc(msg: string, fix: string, procedure: string, code: int) {
 	fmt.printfln(
-		"\x1b[31m    Error \x1b[0m-> \x1b[31m%v \n\x1b[0m%v\nDEBUG: \nProcedure: %v\nError Code: %v",
+		"\x1b[31m    Error \x1b[0m-> \x1b[31m%v \n\x1b[0m%v\n\nDEBUG: \nProcedure: %v\nError Code: %v",
 		msg,
 		fix,
 		procedure,
@@ -69,7 +69,7 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.2-1 writen in Odin last update: 10-27-25")
+		fmt.println("Addert-Unified v2.2.2-2 writen in Odin last update: 10-28-25")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
