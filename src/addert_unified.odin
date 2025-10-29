@@ -28,6 +28,8 @@ error :: proc(msg: string, fix: string, procedure: string, code: int) {
 		Procedure is under the debug section used to tell which proc the error is in
 
 		Code is simply used to assign a value and code for the error
+
+		In this program error code start at 10 and go by 10 so we would have 10, 20, 30...110...
 	*/
 }
 
@@ -69,13 +71,13 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.2-2 writen in Odin last update: 10-28-25")
+		fmt.println("Addert-Unified v2.2.3-1 writen in Odin last update: 10-28-25")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
-			"\nAddert-Unified Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\n/ = Calculate the hypotenuse of a triangle\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux Only)\ni = list current local time only (Linux Only)\nw = list current local time only with loop like a clock(Linux Only)\n\nu = update addert you can also run addupt in the terminal\n\nh = help page (current page)",
+			"\nAddert-Unified Program For Adding Suff Now a Four-Function Calculator And Clock\nHELP:\nd = decimal mode\nn = full number mode can only use full numbers\nv = list version and last update\nc = list copyright notice\ns = suptraction mode can only use full numbers\nf = decimal subtraction mode\nm = multiplication mode can only use full numbers\nl = decimal multiplication mode\nq = division mode can only use full numbers (won't show remainder)\no = decimal division mode\nk = Convert C° to F°\nb = Convert F° to C°\n/ = Calculate the hypotenuse of a triangle\n8 = Find the square root of a number\nt = list current local and universal time (Linux Only)\nr = list current local and universal time with loop like a clock (Linux Only)\ni = list current local time only (Linux Only)\nw = list current local time only with loop like a clock(Linux Only)\n\nu = update addert you can also run addupt in the terminal\n\nh = help page (current page)",
 		)
 	} else if mode == '?' {
 		fmt.println(
@@ -228,8 +230,19 @@ main :: proc() {
 		pre_hypotenuse: f64 = (number1 * number1) + (number2 * number2)
 		hypotenuse: f64 = math.sqrt(pre_hypotenuse)
 		fmt.printfln("Hypotenuse = \x1b[33m%f\x1b[0m", hypotenuse)
+	} else if mode == '8' {
+		// Square Root
+		sqrt_input: f64
+		fmt.print("Enter a number to square >> ")
+		libc.scanf("%lf", &sqrt_input)
+		sqrt_output: f64 = math.sqrt(sqrt_input)
+		fmt.printfln(
+			"Note Needed\nThe Square Root of %lf = \x1b[34m%lf\x1b[0m",
+			sqrt_input,
+			sqrt_output,
+		)
 	} else {
-		error("Mode Unknown", "Use the mode h access the help menu", "main", 10)
+		error("Mode Unknown", "Use The Mode \'h\' Access The Help Menu", "main", 10)
 	}
 }
 
