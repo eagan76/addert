@@ -71,7 +71,7 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.3-1 writen in Odin last update: 10-28-25")
+		fmt.println("Addert-Unified v2.2.3-2 writen in Odin last update: 10-28-25")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
@@ -237,7 +237,7 @@ main :: proc() {
 		libc.scanf("%lf", &sqrt_input)
 		sqrt_output: f64 = math.sqrt(sqrt_input)
 		fmt.printfln(
-			"Note Needed\nThe Square Root of %lf = \x1b[34m%lf\x1b[0m",
+			"NOTE: The Output Will Cut Off After The Hundred-Quintillionths Place\nThe Square Root of %.10f = \x1b[34m%.10f\x1b[0m",
 			sqrt_input,
 			sqrt_output,
 		)
