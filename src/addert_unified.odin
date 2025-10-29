@@ -237,7 +237,7 @@ main :: proc() {
 		libc.scanf("%lf", &sqrt_input)
 		sqrt_output: f64 = math.sqrt(sqrt_input)
 		fmt.printfln(
-			"NOTE: The Output Will Cut Off After The Hundred-Quintillionths Place\nThe Square Root of %.10f = \x1b[34m%.10f\x1b[0m",
+			"NOTE: The Output Will Cut Off After The Hundred-Quintillionths Place\nThe Square Root of %.4f = \x1b[34m%.20f\x1b[0m",
 			sqrt_input,
 			sqrt_output,
 		)
