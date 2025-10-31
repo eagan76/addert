@@ -6,7 +6,7 @@
 clear
 echo -e "Starting Install...\n"
 sleep 1
-echo -e "\033[0;34mInstalling Addert Unified v2.2.4-1\n\033[0m"
+echo -e "\033[0;34mInstalling Addert Unified v2.2.4-3\n\033[0m"
 sleep 0.5
 echo -e "Installing localclock_loop.sh..."
 sleep 1
@@ -40,6 +40,11 @@ sleep 1
 echo -e "Installing addupt..."
 sleep 1
 sudo cp ~/addert/bin/addupt /bin
+echo -e "Done\n"
+sleep 1
+echo -e "Installing addupt_deps..."
+sleep 1
+sudo cp ~/addert/bin/addupt_deps /bin
 echo -e "Done\n"
 sleep 1
 echo -e "\033[0;32mInstall Complete!\033[0m"

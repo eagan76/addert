@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Copyright (c) 2025, Tyler Eagan
+# License: BSD-3-Clause License
+
+echo -e "Pulling Deps... \n"
+cd ~/addert
+git pull origin
+echo
+./addupt_deps.sh
