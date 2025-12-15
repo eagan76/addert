@@ -4,7 +4,7 @@
 # License: BSD-3-Clause License
 
 sleep 1
-echo -e "\033[0;34mUpdating to Addert Unified v2.2.4-3\n\033[0m"
+echo -e "\033[0;34mUpdating to Addert Unified v2.2.4-4\n\033[0m"
 sleep 0.5
 echo -e "Updating localclock_loop.sh..."
 sleep 1
@@ -35,4 +35,4 @@ sleep 1
 sudo cp ~/addert/bin/clock /bin
 echo -e "Done\n"
 sleep 1
-echo -e "\033[0;32mUpdate Complete!\033[0m"
+echo -e "\033[0;32mUpdate Complete! Merry Christmas!\033[0m"
