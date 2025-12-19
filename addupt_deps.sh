@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Copyright (c) 2025, Tyler Eagan
+# Copyright (c) 2025-2026, Tyler Eagan
 # License: BSD-3-Clause License
 
 sleep 1
