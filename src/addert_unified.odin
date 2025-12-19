@@ -36,10 +36,11 @@ error :: proc(msg: string, fix: string, procedure: string, code: int) -> int {
 }
 
 main :: proc() {
+	// |V| 'y' or 'n' for enabled/disable |V|
+	christmas_egg_enabled: rune = 'y'
 	mode: rune = ']'
 	fmt.print("Mode: type h for help -> ")
 	libc.scanf("%c", &mode)
-
 	if mode == 'd' {
 
 		float1: c.float = 0.0
@@ -73,9 +74,11 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.4-4 writen in Odin last update: 12-14-25")
+		fmt.println("Addert-Unified v2.2.5-1 writen in Odin last update: 12-18-25")
 	} else if mode == 'c' {
-		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
+		fmt.println(
+			" (c) 2025-2026 Tyler Eagan, product is licensed under the BSD-3-Clause license\n",
+		)
 		// help page
 	} else if mode == 'h' {
 		fmt.println(
@@ -216,6 +219,14 @@ main :: proc() {
 		fmt.println("\nSong Credit: \n\nAddert Theme No. 1, by Tyler Eagan")
 
 		fmt.println("\n\nThank You For Useing Addert, Tyler Eagan")
+	} else if mode == ';' && christmas_egg_enabled == 'y' {
+		libc.system("mpv ~/addert/music/christmasegg.wav")
+		fmt.println(
+			"\nSong Credit: \n\n Title: We Wish You a Merry Christmas – Arranged for Strings\n Creator: Gregor Quendel\n License: Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)",
+		)
+		fmt.println("\n\nMerry Christmas and Thanks for using addert :]  !\n")
+	} else if mode == ';' && christmas_egg_enabled == 'n' {
+		error("Try again after 12/18 ;)", "Wait 'til Dec 18", "main", 69)
 	} else if mode == '-' {
 		libc.system("mpv ~/addert/music/addert_theme.wav")
 

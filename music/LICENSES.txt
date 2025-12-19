@@ -4,3 +4,6 @@ addert_theme2.mp3 = ( Homeworld Collapse by Arthur Vyncke | https://soundcloud.c
 			https://creativecommons.org/licenses/by-sa/3.0/deed.en_US );
 
 addert_theme.wav && Addert_Theme3.wav = ( Addert Theme by Tyler Eagan WTFPL License )
+
+christmasegg.wav = ( We Wish You a Merry Christmas – Arranged for Strings Creator: Gregor Quendel License: Creative Commons Attribution–NonCommercial 4.0
+(CC BY-NC 4.0))
