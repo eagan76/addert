@@ -45,6 +45,7 @@ sleep 1
 echo -e "Installing addupt_deps..."
 sleep 1
 sudo cp ~/addert/bin/addupt_deps /bin
+sudo cp ~/addert/addupt_deps.sh /bin
 echo -e "Done\n"
 sleep 1
 echo -e "\033[0;32mInstall Complete!\033[0m"
