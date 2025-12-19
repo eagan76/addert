@@ -18,7 +18,7 @@ echo -e "Updating clockloop.sh..."
 sleep 1
 sudo cp ~/addert/bin/clockloop.sh /bin
 echo -e "Done\n"
-echo -e "Updating addert..."
+echo -e "Updating run_addert (addert loop)..."
 sleep 1
 sudo cp ~/addert/bin/run_addert.sh /bin
 echo -e "Done\n"
@@ -31,4 +31,4 @@ sleep 1
 sudo cp ~/addert/bin/clock /bin
 echo -e "Done\n"
 sleep 1
-echo -e "\033[0;32mDeps Update Complete!\n Run addupt for a full upgrade\033[0m"
+echo -e "\033[0;32mDeps Update Complete!\n Run 'addupt' for a full upgrade\033[0m"

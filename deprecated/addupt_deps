@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo echo -e "Pulling Deps... \n"
+cd ~/addert
+git pull origin
+addupt_deps.sh
