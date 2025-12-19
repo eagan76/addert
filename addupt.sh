@@ -22,6 +22,7 @@ echo -e "Updating addert..."
 sleep 1
 sudo cp ~/addert/bin/addert /bin
 sudo cp ~/addert/bin/addupt_deps.sh /bin
+sudo cp ~/addert/bin/cdert.sh /bin
 echo -e "Done\n"
 echo -e "Updating run_addert.sh..."
 sleep 1

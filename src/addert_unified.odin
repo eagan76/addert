@@ -206,7 +206,7 @@ main :: proc() {
 	} else if mode == 'u' {
 		fmt.print("Updating Addert Dependencies\n\n")
 		fmt.println("Pulling Deps... \n")
-		libc.system("cd ~/addert")
+		libc.system("cdert.sh")
 		libc.system("git pull origin")
 		libc.system("addupt_deps.sh")
 	} else if mode == 'z' {
