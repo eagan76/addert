@@ -45,7 +45,7 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert_Win v2.1.4-1 writen in Odin last update: 10-13-25")
+		fmt.println("Addert_Win v2.1.4-1 writen in Odin last update: 10-13-25 ! Deprecated !")
 	} else if mode == 'c' {
 		fmt.println(" (c) 2025 Tyler Eagan, product is licensed under the BSD-3-Clause license\n")
 		// help page
