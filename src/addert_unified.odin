@@ -74,7 +74,7 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.5-2 writen in Odin last update: 12-19-25")
+		fmt.println("Addert-Unified v2.2.6-1 writen in Odin last update: 12-31-25")
 	} else if mode == 'c' {
 		fmt.println(
 			" (c) 2025-2026 Tyler Eagan, product is licensed under the BSD-3-Clause license\n",
@@ -228,7 +228,7 @@ main :: proc() {
 		)
 		fmt.println("\n\nMerry Christmas and Thanks for using addert :]  !\n")
 	} else if mode == ';' && christmas_egg_enabled == 'n' {
-		error("Try again after 12/18 ;)", "Wait 'til Dec 18", "main", 69)
+		error("Try again between 12/18-1/1 ;)", "Wait 'til Dec 18", "main", 69)
 	} else if mode == '-' {
 		libc.system("mpv ~/addert/music/addert_theme.wav")
 
