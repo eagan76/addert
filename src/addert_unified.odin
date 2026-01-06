@@ -37,7 +37,7 @@ error :: proc(msg: string, fix: string, procedure: string, code: int) -> int {
 
 main :: proc() {
 	// |V| 'y' or 'n' for enabled/disable |V|
-	christmas_egg_enabled: rune = 'y'
+	christmas_egg_enabled: rune = 'n'
 	mode: rune = ']'
 	fmt.print("Mode: type h for help -> ")
 	libc.scanf("%c", &mode)
@@ -74,10 +74,10 @@ main :: proc() {
 
 		fmt.printf("%d + %d = \x1b[34m%d\x1b[0m\n", num1, num2, sum_int)
 	} else if mode == 'v' {
-		fmt.println("Addert-Unified v2.2.6-2 writen in Odin last update: 12-31-25")
+		fmt.println("Addert-Unified v2.3.1-1 writen in Odin last update: 1-5-26")
 	} else if mode == 'c' {
 		fmt.println(
-			" (c) 2025-2026 Tyler Eagan, product is licensed under the BSD-3-Clause license\n",
+			" Copyright (c) 2026 Tyler Eagan, product is licensed under the BSD-3-Clause license\n",
 		)
 		// help page
 	} else if mode == 'h' {
@@ -228,7 +228,7 @@ main :: proc() {
 		)
 		fmt.println("\n\nMerry Christmas and Thanks for using addert :]  !\n")
 	} else if mode == ';' && christmas_egg_enabled == 'n' {
-		error("Try again between 12/18-1/2 ;)", "Wait 'til Dec 18", "main", 69)
+		error("Try again between 12/18-1/5 ;)", "Wait 'til Dec 18", "main", 69)
 	} else if mode == '-' {
 		libc.system("mpv ~/addert/music/addert_theme.wav")
 
